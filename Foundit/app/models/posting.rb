@@ -32,4 +32,5 @@ class Posting < ActiveRecord::Base
   validates :description, :presence => true, :length => { :minimum => 10 }
   validates :posting_type, :presence => true
 
+#
 end
