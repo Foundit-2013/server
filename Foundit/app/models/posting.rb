@@ -9,7 +9,7 @@ class Posting < ActiveRecord::Base
   
   attr_accessible :photo
   has_attached_file :photo,
-  :styles => { :large => "300x300>", :thumb => "60x60>" }, 
+  :styles => { :large => "300x300>", :thumb => "114x114>" }, 
   #:url => "/system/:class/:attachment/:id/:style/:basename.:extension",
   #:path => ":rails_root/images"
   :path => ":rails_root/public/system/:class/:attachment/:id_partition/:style/:filename"
