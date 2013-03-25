@@ -57,6 +57,7 @@ Blog::Application.routes.draw do
   
   match 'postings_show_lost' => 'postings#show_lost'
   match 'postings_show_found' => 'postings#show_found'
+  match 'about' => 'postings#about'
 
   # See how all your routes lay out with "rake routes"
 

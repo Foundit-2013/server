@@ -1,3 +1,292 @@
 // Place all the styles related to the Postings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+   @charset "UTF-8";
+div.diffcolor {
+ 
+  line-height: 22px;
+}
+
+html { 
+  height: 100%; 
+  background-color:#7594be;
+  
+}
+
+.imageBack {
+  background-image:url('Clouds_only.png');
+  background-repeat:no-repeat;
+  background-position:bottom;
+  background-size: 100% 75%;
+  
+
+  height:100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: relative;
+  padding-top:0px;
+  padding-bottom: 20px;
+  height: auto;
+
+  color: #FFF;
+
+  overflow: hidden;
+  font-family: Verdana;
+  text-align:center;
+
+}
+
+body {
+
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+  position: relative;
+/*  text-shadow: 1px 1px 0px #ffffff; */
+
+  
+
+}
+
+.mainLogo {
+  width: 10%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+}
+
+.homeText {
+  width: 300px;
+  height: 50px;
+  display: block;
+  padding-top:35px;
+  text-align:center;
+  font-family:verdana,arial,helvetica;font-size:13pt;
+  text-decoration:none;
+  color:#ffffff;
+  
+  background-image:url("blue_2.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:190px 40px;
+  &:visited {
+    font-family:verdana,arial,helvetica;color:#ffffff;font-size:25pt;
+    color:#ffffff;
+  }
+  &:hover {
+    background-image:url("blue_post.png");
+    color:#ffffff;
+  }
+}
+
+table a:link {
+  color: #666;
+  font-weight: bold;
+  text-decoration:none;
+}
+table a:visited {
+  color: #999999;
+  font-weight:bold;
+  text-decoration:none;
+}
+table a:active,
+table a:hover {
+  color: #bd5a35;
+  text-decoration:underline;
+}
+table {
+  font-family:Arial, Helvetica, sans-serif;
+  color:#666;
+  font-size:12px;
+  text-shadow: 1px 1px 0px #fff;
+  background:#eaebec;
+  margin:20px;
+  border:#ccc 1px solid;
+
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+  padding:21px 25px 22px 25px;
+  border-top:1px solid #fafafa;
+  border-bottom:1px solid #e0e0e0;
+
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+  text-align: left;
+  padding-left:20px;
+}
+table tr:first-child th:first-child {
+  -moz-border-radius-topleft:3px;
+  -webkit-border-top-left-radius:3px;
+  border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+  -moz-border-radius-topright:3px;
+  -webkit-border-top-right-radius:3px;
+  border-top-right-radius:3px;
+}
+table tr {
+  text-align: center;
+  padding-left:20px;
+}
+table td:first-child {
+  text-align: left;
+  padding-left:20px;
+  border-left: 0;
+}
+table td {
+  padding:18px;
+  border-top: 1px solid #ffffff;
+  border-bottom:1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+  background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td {
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+  background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+  border-bottom:0;
+}
+table tr:last-child td:first-child {
+  -moz-border-radius-bottomleft:3px;
+  -webkit-border-bottom-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+  -moz-border-radius-bottomright:3px;
+  -webkit-border-bottom-right-radius:3px;
+  border-bottom-right-radius:3px;
+}
+table tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);  
+}
+
+
+
+#menu {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 0 12%;
+  margin: 0px 0;
+  width: auto;
+  list-style-type: none;
+  font-size: 13px;
+  background: #033695;
+  height: 40px;
+  /*border-top: 2px solid #eee;*/
+  border-left: 2px solid #eee;
+  border-bottom: solid 2px #272727;
+  /*border-bottom: 2px solid #ccc;*/
+  border-right: 2px solid #ccc;
+}
+#menu li {
+  float: left;
+  margin: 0;
+  
+}
+#menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 90px;
+  line-height: 40px;
+  color: #666;
+}
+#menu li a:hover, #menu li.active a {
+  background-color: #f5f5f5;
+  border-bottom: solid 2px #272727;
+  /*border-bottom: 2px solid #DDD;*/
+  color: #999;
+}
+
+/* Blue Menu */
+#menu.blue {
+  /*border-top: 2px solid #104dbe;*/
+  border-left: 2px solid #356AA0;
+  /*border-bottom: 2px solid #204061;*/
+  border-bottom: solid 2px #3e3d3d;
+  border-right: 2px solid #204061;
+  background: #033695;}
+#menu.blue a {
+  color: #fff;
+  }
+#menu.blue li a:hover, #menu.blue li.active a {
+  color: #90CDFF; 
+  background: #3D7BBB; 
+  border-bottom: solid 2px #272727;
+  /*border-bottom: 2px solid #356AA0;*/
+  }
+  
+input[type="text"] {
+  outline: none;
+  padding: 10px;
+  width: 220px;
+  font-family: Helvetica, Arial, "Sans Serif";
+  font-size: 13px;
+  color: #333;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #eee;
+  -moz-box-shadow: inset 0px 0px 10px 0px #eee;
+  box-shadow: inset 0px 0px 10px 0px #eee;
+}
+
+input[type="text"]:focus {
+  border-color: #999;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #ddd;
+  -moz-box-shadow: inset 0px 0px 10px 0px #ddd;
+  box-shadow: inset 0px 0px 10px 0px #ddd;
+}
+
+textarea[type="text"] {
+  outline: none;
+  padding: 10px;
+  width: 220px;
+  font-family: Helvetica, Arial, "Sans Serif";
+  font-size: 13px;
+  color: #333;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #eee;
+  -moz-box-shadow: inset 0px 0px 10px 0px #eee;
+  box-shadow: inset 0px 0px 10px 0px #eee;
+  width:40%;
+  height:150px;
+}
+
+textarea[type="text"]:focus {
+  border-color: #999;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #ddd;
+  -moz-box-shadow: inset 0px 0px 10px 0px #ddd;
+  box-shadow: inset 0px 0px 10px 0px #ddd;
+}

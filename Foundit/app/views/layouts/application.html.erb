@@ -6,9 +6,16 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: #EEEEEE;">
-
+<header>
+	<ul id="menu" class="blue">
+			<li><%= link_to "Show All", postings_path %></li>
+			<li><%= link_to "Sort by Lost", {:controller => "postings", :action => "show_lost"} %></li>
+			<li><%= link_to "Sort by Found", {:controller => "postings", :action => "show_found"} %></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+</header>
+<div class = "imageBack">
 <%= yield %>
-
+</div>
 </body>
 </html>

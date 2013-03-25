@@ -1,17 +1,17 @@
-<h1>Postings</h1>
-
+<div style="width: 1100px;margin: 0 auto;">
 <br />
-<%= link_to 'New Posting', new_posting_path %>
-<br /><br />
-<%= link_to 'Show All', postings_path %><br />
-<%= link_to 'Sort by Lost', :controller => "postings", :action => "show_lost" %><br />
-<%= link_to 'Sort by Found', :controller => "postings", :action => "show_found"  %>
-<br /><br />
+<%= image_tag("FounditLogo@2x.png", :class => "mainLogo") %>
+
+<div style="margin: 0 auto;width: auto;padding-left: 36%;">
+	<%= link_to "New Posting", new_posting_path, :class => "homeText" %>
+<div style="margin-left: 90px;">
 Type = 1 = Lost<br />
 Type = 2 = Found
+</div>
+</div>
 <br /><br />
-
-<table border="1">
+</div>
+<table style="width: auto;margin: 0 auto;" border="1" cellspacing='0'>
   <tr>
   	<th>ID</th>
   	<th>Type</th>
@@ -42,3 +42,4 @@ Type = 2 = Found
   </tr>
 <% end %>
 </table>
+</div>
