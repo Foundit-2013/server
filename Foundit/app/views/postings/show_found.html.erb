@@ -19,8 +19,6 @@ Type = 2 = Found
     <th>Description</th>
     <th>Image</th>
     <th>Image Thumbnail</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
     <th>Created At</th>
     <th>Last Modified</th>
     <th></th>
@@ -39,8 +37,6 @@ Type = 2 = Found
     <td><%= posting.description %></td>
     <td><%= image_tag(posting.photo.url(:large)) %></td>
     <td><%= image_tag(posting.photo.url(:thumb)) %></td>
-    <td><%= posting.latitude %></td>
-    <td><%= posting.longitude %></td>
     <td><%= posting.created_at %></td>
     <td><%= posting.updated_at %></td>
     <td><%= link_to 'Show', posting %></td>
