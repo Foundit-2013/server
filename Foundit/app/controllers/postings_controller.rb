@@ -77,6 +77,12 @@ class PostingsController < ApplicationController
   # Posting /posting
   # Posting /posting.json
   def create
+    
+    if (params[:posting][:latitude] == "" || params[:posting][:longitude] == "" ) 
+      params[:posting][:latitude] = 0.0;
+      params[:posting][:longitude] = 0.0;
+    end
+    
     @posting = Posting.new(params[:posting])
 
     respond_to do |format|
