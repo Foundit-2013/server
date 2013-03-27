@@ -4,6 +4,8 @@ class CreatePostings < ActiveRecord::Migration
       t.text :posting_type
       t.string :name
       t.text :description
+      t.text :latitude
+      t.text :longitude
       
       t.timestamps
     end

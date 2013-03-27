@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130217201417) do
+ActiveRecord::Schema.define(:version => 20130327015438) do
 
   create_table "postings", :force => true do |t|
     t.text     "posting_type"
     t.string   "name"
     t.text     "description"
+    t.text     "latitude"
+    t.text     "longitude"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "photo_file_name"
