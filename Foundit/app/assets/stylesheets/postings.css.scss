@@ -15,16 +15,49 @@ html {
 }
 
 .imageBack {
-  background-image:url('Clouds_only.png');
+background-image: url('Clouds_only.png'), url('Clouds_only_Layer.png');
+background-position: bottom, bottom;
+background-repeat: no-repeat, repeat-y;
+background-size: 100% 75%;
+
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#imageBack:before,
+#imageBack:after {
+   position:fixed;
+   z-index:-1;
+   bottom: 0;
+}
+
+#imageBack:before {
+  content:url('');
+  background-image: url('Clouds_only.png');
   background-repeat:no-repeat;
   background-position:bottom;
-  background-size: 100% 75%;
+  background-size: 100% 70%;
+  vertical-align: bottom;
+  text-align:center;
   
-
   height:100%;
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+#imageBack:after {
+
+  background-repeat:repeat-y;
+  background-position:bottom;
+  background-size: 100% 75%;
+  text-align:center;
+  
+  width: 100%;
+  margin: 0;
+
 }
 
 .header {
@@ -202,7 +235,7 @@ table tr:hover td {
   font-family: Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0 0 0 12%;
+  padding: 0 0 0 16%;
   margin: 0px 0;
   width: auto;
   list-style-type: none;
@@ -214,6 +247,7 @@ table tr:hover td {
   border-bottom: solid 2px #272727;
   /*border-bottom: 2px solid #ccc;*/
   border-right: 2px solid #ccc;
+  
 }
 #menu li {
   float: left;
