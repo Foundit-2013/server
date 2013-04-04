@@ -26,6 +26,20 @@ background-size: 100% 75%;
   padding: 0;
 }
 
+h2.headerAbout,h1.headerAbout  {
+	color: white;
+    text-shadow: -1.9px 0 black, 0 1.9px black, 1.9px 0 black, 0 -1.9px black;	
+}
+
+.styled-select{
+	font-size: 15px;
+	width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url(new_arrow.png) no-repeat right #ffffff;
+   border: 1px solid #a2a2a2;
+   }
+
 #imageBack:before,
 #imageBack:after {
    position:fixed;
@@ -229,13 +243,6 @@ table tr:last-child td:last-child {
   -webkit-border-bottom-right-radius:3px;
   border-bottom-right-radius:3px;
 }
-table tr:hover td {
-  background: #f2f2f2;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-  background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);  
-}
-
-
 
 #menu {
   font-family: Arial, sans-serif;

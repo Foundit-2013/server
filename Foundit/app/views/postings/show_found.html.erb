@@ -5,20 +5,15 @@
 <br /><br />
 <div style="margin: 0 auto;width: auto;padding-left: 36%;">
 	<%= link_to "New Posting", new_posting_path, :class => "homeText" %>
-<div style="margin-left: 90px;">
-Type = 1 = Lost<br />
-Type = 2 = Found
-</div>
 </div>
 <br /><br />
 </div>
-<table style="width: auto;margin: 0 auto;" border="1" cellspacing='0'>
+<table style="width: 75%;margin: 0 auto;" border="0" cellspacing='0'>
   <tr>
   	<th>ID</th>
+  	<th>Image</th>
   	<th>Type</th>
-    <th>Name</th>
-    <th>Image</th>
-    <th>Image Thumbnail</th>
+    <th>Item</th>
     <th>Created At</th>
     <th></th>
     <th></th>
@@ -31,10 +26,12 @@ Type = 2 = Found
 @postings.each do |posting| %>
   <tr>
   	<td><%= posting.id %></td>
-  	<td><%= posting.posting_type %></td>
+  	<td><%= image_tag(posting.photo.url(:thumb)) %></td>
+  	<td>
+  		<%= 'Lost' if posting.posting_type == "1" %>
+  		<%= 'Found' if posting.posting_type == "2" %>
+  	</td>
     <td><%= posting.name %></td>
-    <td><%= image_tag(posting.photo.url(:large)) %></td>
-    <td><%= image_tag(posting.photo.url(:thumb)) %></td>
     <td><%= posting.created_at_formatted %></td>
     <td><%= link_to 'Show', posting %></td>
     <td><%= link_to 'Edit', edit_posting_path(posting) %></td>

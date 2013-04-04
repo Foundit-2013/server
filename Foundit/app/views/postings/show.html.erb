@@ -4,76 +4,72 @@
 
 <br /><br />
 <div style="text-align: center;">
-<br />
+<br /><br /><br /><br /><br />
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>ID:</b>
-  <%= @posting.id %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= @posting.posting_type %>
-</p>
 
 
-<p>
-  <b>Name:</b>
-  <%= @posting.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @posting.description %>
-</p>
-
-<%
-=begin %>
-<p>
-  <b>Image:</b>
-  <%= image_tag(@posting.image) %>
-</p>
-<%
-=end %>
-
-<p>
-  <b>Image:</b>
-  <%= image_tag(@posting.photo.url(:large)) %>
-</p>
-
-<p>
-  <b>Image Thumbnail:</b>
-  <%= image_tag(@posting.photo.url(:thumb)) %>
-</p>
-
-<%
-=begin %>
-<p>
-  <b>Image Thumbnail:</b>
-  <%= image_tag(@posting.image_thumb) %>
-</p>
-<%
-=end %>
-
-<p>
-  <b>Latitude:</b>
-  <%= @posting.latitude %>
-</p>
-<p>
-  <b>Longitude:</b>
-  <%= @posting.longitude %>
-</p>
-<p>
-  <b>Created At:</b>
-  <%= @posting.created_at %>
-</p>
-
-<p>
-  <b>Last Modified:</b>
-  <%= @posting.updated_at %>
-</p>
+<table style="width: 70%;margin: 0 auto;table-layout:absolute;" border="0" cellspacing='0'>
+  <tr>
+  	<th>
+  		<p><b>ID:</b></p>
+  	</th>
+  	<td style="text-align: left;">
+  		<%= @posting.id %>
+  	</td>
+  </tr>
+  <tr>
+  	<th>
+  		<p><b>Type:</b></p>
+  	</th>
+  	<td style="text-align: left;">
+  		<%= 'Lost' if @posting.posting_type == "1" %>
+  		<%= 'Found' if @posting.posting_type == "2" %>
+  	</td>
+  </tr>
+  <tr>
+  	<th>
+  		<p><b>Name:</b></p>
+  	</th>
+  	<td style="text-align: left;white-space:pre-line;">
+  		<p><%= @posting.name %></p>
+  	</td>
+  </tr>
+  <tr>
+  	<th>
+	  	<p><b>Description:</b></p>
+  	</th>
+  	<td style="text-align: left;">
+	  	<p><%= @posting.description.gsub(/\n/, '<br/>').html_safe %></p>
+  	</td>
+  </tr>
+  <tr>
+  	<td colspan="2" style="text-align: center;">
+  		<%=link_to(image_tag(@posting.photo.url(:large)),@posting.photo.url(:original)) %>
+  	</td>
+  </tr>
+  <tr>
+  	<th>
+  		<p><b>Latitude:</b></p>
+  		<p><b>Longitude:</b></p>
+  	</th>
+  	<td style="text-align: left;">
+  		<p><%= @posting.latitude %></p>
+  		<p><%= @posting.longitude %></p>
+  	</td>
+  </tr> 
+  <tr>
+  	<th>
+  		<p><b>Created At:</b></p>
+  		<p><b>Modified:</b></p>
+  	</th>
+  	<td style="text-align: left;">
+  		<p><%= @posting.created_at %></p>
+  		<p><%= @posting.updated_at %></p>
+  	</td>
+  </tr> 
+</table>
 
 <br />
 

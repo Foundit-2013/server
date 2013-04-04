@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :posting_type %><br />
-    <%= f.select(:posting_type, options_for_select([['Lost', 1],['Found', 2]])) %> 
+    <%= f.select(:posting_type, options_for_select([['Lost', 1],['Found', 2]]), {}, {:class => "styled-select"}) %> 
   </div>
   <div class="field">
     <%= f.label :name %><br />
