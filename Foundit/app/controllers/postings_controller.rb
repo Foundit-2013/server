@@ -58,6 +58,19 @@ class PostingsController < ApplicationController
     end
   end
   
+  # GET /username
+  # GET /username.json
+  def userposts
+    #@posting = Posting.find(params[:id])
+    @postings = Posting.where(:username => params[:id])
+    @postings = @postings.find(:all, :order => "created_at DESC")
+
+    respond_to do |format|
+      format.json { render :json => @postings.to_json(:methods => [:photo_url_thumb, :photo_url_large, :created_at_formatted]), :content_type => 'application/json'}
+      #format.json { render json: @postings }
+    end
+  end
+  
   # GET /postings/new
   # GET /postings/new.json
   def new

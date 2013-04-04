@@ -7,6 +7,8 @@ class CreatePostings < ActiveRecord::Migration
       t.text :latitude
       t.text :longitude
       
+      t.text :username
+      
       t.timestamps
     end
   end

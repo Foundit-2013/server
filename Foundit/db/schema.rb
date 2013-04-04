@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130327015438) do
     t.text     "description"
     t.text     "latitude"
     t.text     "longitude"
+    t.text     "username"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "photo_file_name"
