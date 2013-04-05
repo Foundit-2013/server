@@ -9,7 +9,6 @@ div.diffcolor {
 }
 
 html { 
-  height: 100%; 
   background-color:#7594be;
   
 }
@@ -152,7 +151,7 @@ body {
 }
 
 table a:link {
-  color: #666;
+  color: #999999;
   font-weight: bold;
   text-decoration:none;
 }
@@ -164,7 +163,7 @@ table a:visited {
 table a:active,
 table a:hover {
   color: #bd5a35;
-  text-decoration:underline;
+
 }
 table {
   font-family:Arial, Helvetica, sans-serif;
